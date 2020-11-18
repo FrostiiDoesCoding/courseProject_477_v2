@@ -7,6 +7,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
+import com.squareup.okhttp.ResponseBody;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
             Response response;
             try {
                 response = client.newCall(request).execute();
+               String test = response.body().string();
+                return null;
             }catch (Exception e){
             }
             return null;
